@@ -6,6 +6,14 @@ class EXAMPLE_API CHelpers
 {
 public:
 	template<typename T>
+	static T* GetAsset(FString InPath)
+	{
+		ConstructorHelpers::FObjectFinder<T> asset(*InPath);
+
+		return asset.Object;
+	}
+
+	template<typename T>
 	static void GetAsset(T** OutObject, FString InPath)
 	{
 		ConstructorHelpers::FObjectFinder<T> asset(*InPath);
