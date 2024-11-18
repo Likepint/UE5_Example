@@ -9,6 +9,13 @@ class EXAMPLE_API ACQuinn : public ACharacter
 {
 	GENERATED_BODY()
 
+protected:
+	UPROPERTY(VisibleAnywhere)
+	class USpringArmComponent* SpringArm;
+
+	UPROPERTY(VisibleAnywhere)
+	class UCameraComponent* Camera;
+
 public:
 	ACQuinn();
 
